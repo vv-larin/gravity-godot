@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c7kx1fbj1hy6n"]
+
+[ext_resource type="Script" uid="uid://ciegkyq4ovlq" path="res://earth.gd" id="1_1odxm"]
+[ext_resource type="Script" uid="uid://bwrdwpfe1gpc2" path="res://trail.gd" id="2_mtr83"]
+
+[node name="Earth" type="Node2D" unique_id=1993841742]
+script = ExtResource("1_1odxm")
+
+[node name="Trail" type="Node2D" parent="." unique_id=1766574677]
+script = ExtResource("2_mtr83")
+circle_radius = 2.0

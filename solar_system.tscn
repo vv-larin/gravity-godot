@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dnw6bnc6lpxyd"]
+
+[ext_resource type="Script" uid="uid://de37axmhcrtep" path="res://sun.gd" id="1_hbvo3"]
+[ext_resource type="PackedScene" uid="uid://c7kx1fbj1hy6n" path="res://planet.tscn" id="2_hp4wh"]
+[ext_resource type="Script" uid="uid://cs1xulh8fo767" path="res://camera_2d.gd" id="2_tfb7d"]
+
+[sub_resource type="Environment" id="Environment_g0wq0"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.5
+glow_blend_mode = 0
+
+[node name="SolarSystem" type="Node2D" unique_id=1053352259]
+
+[node name="Sun" type="Node2D" parent="." unique_id=1623989493]
+script = ExtResource("1_hbvo3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=799834015]
+script = ExtResource("2_tfb7d")
+
+[node name="Earth" parent="." unique_id=1993841742 instance=ExtResource("2_hp4wh")]
+
+[node name="Mercury" parent="." unique_id=1041439374 instance=ExtResource("2_hp4wh")]
+orbit_radius = 0.39
+display_radius = 3.0
+body_color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+
+[node name="Venus" parent="." unique_id=1764552619 instance=ExtResource("2_hp4wh")]
+orbit_radius = 0.72
+body_color = Color(0.9500093, 0.87966, 0.58511835, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=943788688]
+environment = SubResource("Environment_g0wq0")
